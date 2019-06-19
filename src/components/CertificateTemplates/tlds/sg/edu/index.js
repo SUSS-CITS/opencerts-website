@@ -1,15 +1,19 @@
+/* eslint-disable camelcase */
+/* because we need to use _ to replace hyphens in dns */
 import { addDirToTemplatePath } from "template-utils/addDirToTemplatePath";
 
-import singaporetech from "./singaporetech";
+import ite from "./ite";
 import np from "./np";
 import nyp from "./nyp";
-import ite from "./ite";
+import singaporetech from "./singaporetech";
+import suss from "./suss";
 import tp from "./tp";
 
 export default addDirToTemplatePath("edu", {
-  ...singaporetech,
+  ...ite,
   ...np,
   ...nyp,
-  ...ite,
+  ...singaporetech,
+  ...suss,
   ...tp
 });
