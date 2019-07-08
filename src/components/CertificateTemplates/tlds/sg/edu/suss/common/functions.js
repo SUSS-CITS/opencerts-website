@@ -18,9 +18,9 @@ export const formatSplitText = splitText => {
   if (textLength > 20) {
     // explanation of indexOf:
     // - string.indexOf(searchvalue, start)
-    const firstPart = trimText.substr(0, trimText.indexOf(" ", 20));
+    const firstPart = trimText.substr(0, trimText.indexOf(" ", 19));
     const secondPart = trimText.substring(
-      trimText.indexOf(" ", 20),
+      trimText.indexOf(" ", 19),
       textLength
     );
     return (

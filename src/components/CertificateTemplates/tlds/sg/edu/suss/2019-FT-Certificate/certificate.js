@@ -1,36 +1,15 @@
 import PropTypes from "prop-types";
-import { SUSS_CERT_BG, SUSS_LOGO, SEAL } from "../common/images";
-import styles from "../common/customFonts";
+import { SUSS_LOGO, SEAL } from "../common/images";
+import styles from "../common/customStyles";
 import { formatDate, formatSplitText } from "../common/functions";
-
-const bgStyle = {
-  backgroundRepeat: "no-repeat",
-  backgroundImage: `url(${SUSS_CERT_BG})`,
-  backgroundSize: "contain",
-  backgroundPosition: "center",
-  minWidth: "794px",
-  minHeight: "1123px"
-};
-
-const logoStyle = {
-  width: "309px",
-  height: "156px",
-  marginTop: "130px"
-};
-
-const signStyle = {
-  width: "2.8cm",
-  height: "2.8cm",
-  align: "left"
-};
 
 const Template = ({ certificate }) => (
   <div>
     {styles()}
 
-    <div className="container" style={bgStyle}>
+    <div className="container certBgStyle">
       <div className="row d-flex justify-content-center">
-        <img src={SUSS_LOGO} style={logoStyle} />
+        <img src={SUSS_LOGO} className="logoStyle" />
       </div>
 
       <div className="row d-flex justify-content-center">
@@ -85,13 +64,13 @@ const Template = ({ certificate }) => (
       </div>
 
       <div
-        className="row align-items-end"
+        className="row d-flex align-items-end"
         style={{ padding: "0px 94px 57px 94px" }}
       >
         <span className="col-md-3 text-center" style={{ padding: "0px" }}>
           <img
             src={certificate.additionalData.certSignatories[0].signature}
-            style={signStyle}
+            className="signStyle"
           />{" "}
           <br />
           <span className="signTextStyle">
@@ -103,7 +82,7 @@ const Template = ({ certificate }) => (
         <span className="col-md-3 text-center" style={{ padding: "0px" }}>
           <img
             src={certificate.additionalData.certSignatories[1].signature}
-            style={signStyle}
+            className="signStyle"
           />{" "}
           <br />
           <span className="signTextStyle">

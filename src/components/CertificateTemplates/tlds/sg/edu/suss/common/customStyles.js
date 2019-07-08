@@ -1,3 +1,5 @@
+import { SUSS_CERT_BG } from "./images";
+
 const styles = () => (
   <div>
     <link
@@ -9,6 +11,21 @@ const styles = () => (
 	.container{
 	width: 794px;
 	height: auto;
+	}
+
+	.certBgStyle{
+	  background-repeat: no-repeat;
+	  background-image: url(${SUSS_CERT_BG});
+	  background-size: contain;
+	  background-position: center;
+	  min-width: 794px;
+	  min-height: 1123px;
+	}
+	
+	.logoStyle {
+	  width: 309px;
+	  height: 156px;
+	  margin-top: 130px;
 	}
 
       	.certTextStyle {
@@ -65,6 +82,13 @@ const styles = () => (
 	color: #003B5C;
 	text-align: left;
 	}
+	
+	.signStyle {
+	  width: 2.8cm;
+	  height: 2.8cm;
+	  align: left;
+	}
+
 
     `}</style>
   </div>
